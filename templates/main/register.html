@@ -1,0 +1,330 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resgister</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'img/apple-touch-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'img/apple-touch-icon-114x114.png' %}">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/nivo-lightbox.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/nivo-lightbox/default.css' %}">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' %}" rel="stylesheet">
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Montserrat:400,700' %}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation
+    ==========================================-->
+    <nav id="menu" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand page-scroll" href="home">AMS</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="home" class="page-scroll">Home</a></li>
+                    <li><a href="#services" class="page-scroll">Pilot</a></li>
+                    <li><a href="#portfolio" class="page-scroll">Employee</a></li>
+                    <li><a href="#testimonials" class="page-scroll">Airplane</a></li>
+                    <li><a href="login">Login</a></li>
+                    <li><a href="register">Register</a></li>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Poppins', sans-serif;
+                background-color: #f0f2f5;
+                color: #1c1e21;
+            }
+            
+            main {
+                height: 90vh;
+                width: 100vw;
+                position: relative;
+                margin: 0 auto;
+            }
+            
+            footer {
+                height: 10vh;
+                background-color: #ffffff;
+            }
+            
+            .row {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 100%;
+                max-width: 1000px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            
+            .colm-logo {
+                flex: 0 0 50%;
+                text-align: left;
+            }
+            
+            .colm-form {
+                flex: 0 0 40%;
+                text-align: center;
+            }
+            
+            .colm-logo img {
+                max-width: 400px;
+            }
+            
+            .colm-logo h2 {
+                font: 26px;
+                font-weight: 400;
+                padding: 0 30px;
+                line-height: 32px;
+            }
+            
+            .colm-form .form-container {
+                background-color: #ffffff;
+                border: none;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+                padding: 20px;
+                max-width: 400px;
+            }
+            
+            .colm-form .form-container input,
+            .colm-form .form-container .btn-login {
+                width: 100%;
+                margin: 5px 0;
+                height: 45px;
+                vertical-align: middle;
+                font-size: 16px;
+            }
+            
+            .colm-form .form-container input {
+                border: 1px solid #dddfe2;
+                color: #1d2129;
+                padding: 0 8px;
+                outline: none;
+            }
+            
+            .colm-form .form-container input:focus {
+                border-color: #1877f2;
+                box-shadow: 0 0 0 2px #e7f3ff;
+            }
+            
+            .colm-form .form-container .btn-login {
+                background-color: #1877f2;
+                border: none;
+                border-radius: 6px;
+                font-size: 20px;
+                padding: 0 16px;
+                color: #ffffff;
+                font-weight: 700;
+            }
+            
+            .colm-form .form-container a {
+                display: block;
+                color: #1877f2;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 10px 0 20px;
+                border-bottom: 1px solid #dadde1;
+            }
+            
+            .colm-form .form-container a:hover {
+                text-decoration: underline;
+            }
+            
+            .colm-form .form-container .btn-new {
+                background-color: #42b72a;
+                border: none;
+                border-radius: 6px;
+                font-size: 17px;
+                line-height: 48px;
+                padding: 0 16px;
+                color: #ffffff;
+                font-weight: 700;
+                margin-top: 20px;
+            }
+            
+            .colm-form p {
+                font-size: 14px;
+            }
+            
+            .colm-form p a {
+                text-decoration: none;
+                color: #1c1e21;
+                font-weight: 600;
+            }
+            
+            .colm-form p a:hover {
+                text-decoration: underline;
+            }
+            
+            .footer-contents {
+                position: relative;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+            
+            footer ol {
+                display: flex;
+                flex-wrap: wrap;
+                list-style-type: none;
+                padding: 10px 0;
+            }
+            
+            footer ol:first-child {
+                border-bottom: 1px solid #dddfe2;
+            }
+            
+            footer ol:first-child li:last-child button {
+                background-color: #f5f6f7;
+                border: 1px solid #ccd0d5;
+                outline: none;
+                color: #4b4f56;
+                padding: 0 8px;
+                font-weight: 700;
+                font-size: 16px;
+            }
+            
+            footer ol li {
+                padding-right: 15px;
+                font-size: 12px;
+                color: #385898;
+            }
+            
+            footer ol li a {
+                text-decoration: none;
+                color: #385898;
+            }
+            
+            footer ol li a:hover {
+                text-decoration: underline;
+            }
+            
+            footer small {
+                font-size: 11px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!DOCTYPE html>
+        <html lang="en">
+            
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Register</title>
+            <!-- <link rel="stylesheet" href="style2.css"> -->
+        </head>
+
+        <body>
+            <main>
+                <div class="row">
+                    <div class="colm-form">
+                        <div class="form-container">
+                            {% load crispy_forms_tags %}         
+                            <!--Register--> 
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <h1>Register</h1>
+                                <form method="POST">
+                                    
+                                    {% csrf_token %}
+                                    {{ register_form|crispy }}                    
+                                    <button class="btn btn-primary" type="submit">Register</button> 
+                                </form>
+                                <p class="text-center">If you already have an account, <a href="login">login</a></p>
+                                <p class="text-center">Or login as <a href="admin">admin</a></p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
+        </body>
+
+        </html>
+    </body>
+
+    </html>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="contact">
+        <div class="container">
+
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br>
+    </div>
+
+    <script type="text/javascript" src="{% static 'js/jquery.1.11.1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/SmoothScroll.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/nivo-lightbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/contact_me.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
